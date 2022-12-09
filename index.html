@@ -1,0 +1,10 @@
+<body>
+  <button id="button">Click me</button>
+  <script>
+    document.querySelector('#button').addEventListener('click', () => {
+      const url = new URL('/api/example', document.location.href);
+      url.searchParams.set('QueryName', 'Goat');
+      fetch(url);
+    });
+  </script>
+</body>
